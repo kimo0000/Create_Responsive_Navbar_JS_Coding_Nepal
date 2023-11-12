@@ -1,0 +1,146 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(to bottom, #a14, #fae);
+}
+ul {
+  list-style: none;
+}
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+}
+header {
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 700;
+}
+header .menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header .menu {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+}
+.logo {
+  font-size: 20px;
+}
+
+.navbar,
+.input {
+  width: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    background-color: #000;
+    top: 60px;
+    left: -50%;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 18px;
+    width: 30%;
+    height: 91%;
+    padding: 10px;
+    transition: 0.3s ease;
+  }
+  .navbar.show_x_nav {
+    left: 0;
+  }
+  .navbar .item {
+    padding: 0;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .navbar .item:hover {
+    padding-left: 15px;
+    transform: scale(1.1);
+  }
+}
+.navbar.hide_nav {
+  display: none;
+}
+.input {
+  position: relative;
+  display: none;
+}
+@media (max-width: 768px) {
+  .input {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10x;
+  }
+}
+.input input {
+    width: 100%;
+    padding: 8px 40px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+@media (max-width: 768px) {
+  .input input {
+   border-radius: 0px;
+  }
+}
+.input i {
+  position: absolute;
+  color: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.input.show_input {
+  display: block;
+}
+.search i {
+  cursor: pointer;
+}
+.search .searh.hide_search {
+  display: none;
+}
+.search .close {
+  display: none;
+}
+.search .close.show_close {
+  display: block;
+}
